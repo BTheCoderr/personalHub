@@ -18,6 +18,8 @@ import StatsSection from '../components/StatsSection';
 import LatestContent from '../components/LatestContent';
 import SkillsSection from '../components/SkillsSection';
 import Newsletter from '../components/Newsletter';
+import HeroSection from '../components/HeroSection';
+import FloatingNav from '../components/FloatingNav';
 
 // Custom TikTok Icon Component
 const TikTokIcon = ({ size = 24, className = "" }) => (
@@ -35,49 +37,49 @@ const TikTokIcon = ({ size = 24, className = "" }) => (
 const socialLinks = [
   {
     name: 'GitHub',
-    url: 'https://github.com/baheemferrell',
+    url: 'https://github.com/BTheCoderr',
     icon: Github,
     color: 'hover:bg-gray-700 hover:text-white',
     description: 'Open source projects & code'
   },
   {
     name: 'YouTube',
-    url: 'https://youtube.com/@baheemferrell',
+    url: 'https://www.youtube.com/channel/UCxSIx1jHikm4Z3q9aSxdyvw',
     icon: Youtube,
     color: 'hover:bg-red-600 hover:text-white',
     description: 'Videos & tutorials'
   },
   {
     name: 'Twitter',
-    url: 'https://twitter.com/baheemferrell',
+    url: 'https://x.com/bthecoderr',
     icon: Twitter,
     color: 'hover:bg-blue-500 hover:text-white',
     description: 'Thoughts & quick updates'
   },
   {
     name: 'Twitch',
-    url: 'https://twitch.tv/baheemferrell',
+    url: 'https://twitch.tv/bthecoderr',
     icon: Twitch,
     color: 'hover:bg-purple-600 hover:text-white',
     description: 'Live streaming & gaming'
   },
   {
     name: 'TikTok',
-    url: 'https://tiktok.com/@baheemferrell',
+    url: 'https://www.tiktok.com/@bthedream_',
     icon: TikTokIcon,
     color: 'hover:bg-black hover:text-white',
     description: 'Short form content & creativity'
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/baheemferrell',
+    url: 'https://www.linkedin.com/in/baheem-ferrell-866122101/',
     icon: Linkedin,
     color: 'hover:bg-blue-700 hover:text-white',
     description: 'Professional networking'
   },
   {
     name: 'Instagram',
-    url: 'https://instagram.com/baheemferrell',
+    url: 'https://www.instagram.com/bthedream_',
     icon: Instagram,
     color: 'hover:bg-pink-600 hover:text-white',
     description: 'Behind the scenes & lifestyle'
@@ -86,18 +88,32 @@ const socialLinks = [
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'Description of your awesome project that showcases your skills.',
-    tech: ['React', 'TypeScript', 'Tailwind'],
-    link: 'https://github.com/your-username/project-one',
-    demo: 'https://project-one-demo.com'
+    title: 'The Rounders',
+    description: 'Professional-grade sports betting analytics platform with real-time odds tracking, sharp movement detection, and advanced statistical analysis.',
+    tech: ['Python', 'Analytics', 'Real-time Data'],
+    link: 'https://github.com/BTheCoderr/theRounders',
+    demo: 'https://github.com/BTheCoderr/theRounders'
   },
   {
-    title: 'Project Two',
-    description: 'Another amazing project that demonstrates your expertise.',
-    tech: ['Next.js', 'Node.js', 'MongoDB'],
-    link: 'https://github.com/your-username/project-two',
-    demo: 'https://project-two-demo.com'
+    title: 'ChessUniverseApp',
+    description: 'Feature-rich multiplayer chess platform with real-time gameplay, AI opponents, puzzle solving, and game analysis built with modern web technologies.',
+    tech: ['JavaScript', 'Node.js', 'Socket.IO', 'MongoDB'],
+    link: 'https://github.com/BTheCoderr/chessUniverseApp',
+    demo: 'https://github.com/BTheCoderr/chessUniverseApp'
+  },
+  {
+    title: 'Extra Set Of Mitts',
+    description: 'Comprehensive Flutter application for managing residential cleaning services with job scheduling, task management, and earnings monitoring.',
+    tech: ['Flutter', 'Dart', 'Mobile App'],
+    link: 'https://github.com/BTheCoderr/extra_set_of_mitts',
+    demo: 'https://github.com/BTheCoderr/extra_set_of_mitts'
+  },
+  {
+    title: 'okay(K)',
+    description: 'Modern artist website built with Next.js 14 and Tailwind CSS, featuring music playback, gallery, and social integration.',
+    tech: ['Next.js', 'Tailwind CSS', 'JavaScript'],
+    link: 'https://github.com/BTheCoderr/okay-k',
+    demo: 'https://okay-k.netlify.app'
   }
 ];
 
@@ -126,6 +142,7 @@ const itemVariants = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+      <FloatingNav />
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <motion.div
           variants={containerVariants}
@@ -134,41 +151,10 @@ export default function Home() {
           className="space-y-8"
         >
           {/* Hero Section */}
-          <motion.div 
-            variants={itemVariants}
-            className="text-center bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8"
-          >
-            <div className="relative w-32 h-32 mx-auto mb-6">
-              <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-4xl font-bold text-white">
-                {/* Replace with your actual image */}
-                BF
-              </div>
-            </div>
-            <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-2">
-              Baheem Ferrell
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-4">
-              Content Creator & Digital Explorer
-            </p>
-            <div className="flex items-center justify-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
-              <div className="flex items-center space-x-1">
-                <MapPin size={16} />
-                <span>Creating from anywhere</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <Globe size={16} />
-                <span>Always exploring</span>
-              </div>
-            </div>
-            <p className="mt-6 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-              Hey, I'm Baheem! 👋 Multi-passionate creator sharing my journey through tech, gaming, and life. 
-              Always down to try new things and connect with awesome people. Come hang out and let's explore 
-              new adventures together!
-            </p>
-          </motion.div>
+          <HeroSection />
 
           {/* Social Media Links */}
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} id="social">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">
               Connect With Me
             </h2>
@@ -209,10 +195,12 @@ export default function Home() {
           <LatestContent />
 
           {/* Skills Section */}
-          <SkillsSection />
+          <div id="skills">
+            <SkillsSection />
+          </div>
 
           {/* Featured Projects */}
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} id="projects">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">
               Featured Projects
             </h2>
@@ -271,6 +259,7 @@ export default function Home() {
           <motion.div 
             variants={itemVariants}
             className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center"
+            id="contact"
           >
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
               Let's Work Together
@@ -279,7 +268,7 @@ export default function Home() {
               I'm always open to discussing new opportunities, collaborations, or just having a chat about tech and creativity.
             </p>
             <motion.a
-              href="mailto:baheem@example.com"
+              href="mailto:contact@baheemferrell.com"
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
