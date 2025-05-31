@@ -8,12 +8,9 @@ import {
   Twitch, 
   ExternalLink,
   Mail,
-  MapPin,
-  Globe,
   Linkedin,
   Instagram
 } from 'lucide-react';
-import Image from 'next/image';
 import StatsSection from '../components/StatsSection';
 import LatestContent from '../components/LatestContent';
 import SkillsSection from '../components/SkillsSection';
@@ -262,7 +259,7 @@ export default function Home() {
             id="contact"
           >
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
               I&apos;m always open to discussing new opportunities, collaborations, or just having a chat about tech and creativity.

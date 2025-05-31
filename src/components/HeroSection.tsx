@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Globe, Code, Zap } from 'lucide-react';
 
@@ -14,7 +15,12 @@ const AnimatedText = ({ text, delay = 0 }: { text: string; delay?: number }) => 
   </motion.span>
 );
 
-const FloatingIcon = ({ icon: Icon, className }: { icon: React.ComponentType<any>; className: string }) => (
+interface IconProps {
+  size?: number;
+  className?: string;
+}
+
+const FloatingIcon = ({ icon: Icon, className }: { icon: React.ComponentType<IconProps>; className: string }) => (
   <motion.div
     className={`absolute ${className}`}
     animate={{
