@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, ExternalLink, Play, BookOpen, Code } from 'lucide-react';
+import { Calendar, ExternalLink, BookOpen, Code } from 'lucide-react';
 
 const contentItems = [
   {

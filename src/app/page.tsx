@@ -7,7 +7,6 @@ import {
   Twitter, 
   Twitch, 
   ExternalLink,
-  Mail,
   Linkedin,
   Instagram
 } from 'lucide-react';

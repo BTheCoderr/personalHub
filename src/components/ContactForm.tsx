@@ -22,8 +22,8 @@ export default function ContactForm() {
 
     try {
       // EmailJS configuration - Replace with your actual values from EmailJS dashboard
-      const serviceId = 'YOUR_SERVICE_ID'; // PASTE YOUR SERVICE ID HERE (from Email Services)
-      const templateId = 'YOUR_TEMPLATE_ID'; // PASTE YOUR TEMPLATE ID HERE (from Email Templates)
+      const serviceId = 'service_fcb4hs4'; // PASTE YOUR SERVICE ID HERE (from Email Services)
+      const templateId = 'template_ojxxmkm'; // PASTE YOUR TEMPLATE ID HERE (from Email Templates)
       const publicKey = 'cBkM5RSjmNp8xBVpE'; // ✅ Already set with your actual public key
 
       const templateParams = {
@@ -72,7 +72,7 @@ export default function ContactForm() {
           Message Sent! 🎉
         </h3>
         <p className="text-gray-600 dark:text-gray-300">
-          Thanks for reaching out! I'll get back to you soon.
+          Thanks for reaching out! I&apos;ll get back to you soon.
         </p>
       </motion.div>
     );
@@ -87,11 +87,11 @@ export default function ContactForm() {
     >
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
-          Let's Connect! 🤝
+          Let&apos;s Connect! 🤝
         </h2>
         <p className="text-gray-600 dark:text-gray-300">
           Got a project idea, collaboration opportunity, or just want to chat? 
-          Drop me a line and let's make something awesome together!
+          Drop me a line and let&apos;s make something awesome together!
         </p>
       </div>
 
