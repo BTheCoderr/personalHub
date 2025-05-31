@@ -62,7 +62,7 @@ export default function FloatingNav() {
         transition={{ delay: 1, duration: 0.6 }}
         className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-full p-2 shadow-lg border border-gray-200 dark:border-gray-700"
       >
-        {navItems.map((item, index) => (
+        {navItems.map((item) => (
           <motion.button
             key={item.label}
             onClick={() => scrollToSection(item.href)}

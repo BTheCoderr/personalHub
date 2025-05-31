@@ -88,32 +88,32 @@ const socialLinks = [
 
 const projects = [
   {
-    title: 'The Rounders',
-    description: 'Professional-grade sports betting analytics platform with real-time odds tracking, sharp movement detection, and advanced statistical analysis.',
-    tech: ['Python', 'Analytics', 'Real-time Data'],
-    link: 'https://github.com/BTheCoderr/theRounders',
-    demo: 'https://github.com/BTheCoderr/theRounders'
+    title: 'JackerBox V2',
+    description: 'Enhanced gaming platform bringing interactive entertainment experiences to life. Built for multiplayer fun and community engagement.',
+    tech: ['React', 'Node.js', 'Socket.IO', 'Gaming'],
+    link: 'https://github.com/BTheCoderr/jackerboxv2',
+    demo: 'https://jackerbox.app'
   },
   {
-    title: 'ChessUniverseApp',
-    description: 'Feature-rich multiplayer chess platform with real-time gameplay, AI opponents, puzzle solving, and game analysis built with modern web technologies.',
-    tech: ['JavaScript', 'Node.js', 'Socket.IO', 'MongoDB'],
-    link: 'https://github.com/BTheCoderr/chessUniverseApp',
-    demo: 'https://github.com/BTheCoderr/chessUniverseApp'
+    title: 'SmartProBono',
+    description: 'Revolutionary platform connecting legal professionals with pro bono opportunities, streamlining access to justice for underserved communities.',
+    tech: ['Next.js', 'TypeScript', 'Legal Tech', 'API Integration'],
+    link: 'https://github.com/BTheCoderr/smartprobono',
+    demo: 'https://smartprobono.org'
   },
   {
-    title: 'Extra Set Of Mitts',
-    description: 'Comprehensive Flutter application for managing residential cleaning services with job scheduling, task management, and earnings monitoring.',
-    tech: ['Flutter', 'Dart', 'Mobile App'],
-    link: 'https://github.com/BTheCoderr/extra_set_of_mitts',
-    demo: 'https://github.com/BTheCoderr/extra_set_of_mitts'
+    title: 'MeetopiaApp',
+    description: 'Modern social networking and meeting platform designed to bring people together through shared interests and meaningful connections.',
+    tech: ['React Native', 'Mobile', 'Social Platform', 'Real-time'],
+    link: 'https://github.com/BTheCoderr/meetopiaapp',
+    demo: 'https://meetopia.vercel.app'
   },
   {
-    title: 'okay(K)',
-    description: 'Modern artist website built with Next.js 14 and Tailwind CSS, featuring music playback, gallery, and social integration.',
-    tech: ['Next.js', 'Tailwind CSS', 'JavaScript'],
-    link: 'https://github.com/BTheCoderr/okay-k',
-    demo: 'https://okay-k.netlify.app'
+    title: 'Ownership T-Shirt Website',
+    description: 'Custom e-commerce platform for premium streetwear and branded apparel, featuring modern design and seamless shopping experience.',
+    tech: ['E-commerce', 'Web Design', 'JavaScript', 'Shopify/WooCommerce'],
+    link: 'https://github.com/BTheCoderr/ownership-tshirt-website',
+    demo: 'https://ownershiptshirt.netlify.app'
   }
 ];
 
@@ -159,7 +159,7 @@ export default function Home() {
               Connect With Me
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {socialLinks.map((link, index) => (
+              {socialLinks.map((link) => (
                 <motion.a
                   key={link.name}
                   href={link.url}
@@ -205,7 +205,7 @@ export default function Home() {
               Featured Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {projects.map((project, index) => (
+              {projects.map((project) => (
                 <motion.div
                   key={project.title}
                   className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg"
@@ -265,7 +265,7 @@ export default function Home() {
               Let's Work Together
             </h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              I'm always open to discussing new opportunities, collaborations, or just having a chat about tech and creativity.
+              I&apos;m always open to discussing new opportunities, collaborations, or just having a chat about tech and creativity.
             </p>
             <motion.a
               href="mailto:contact@baheemferrell.com"

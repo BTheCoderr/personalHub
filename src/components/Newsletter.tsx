@@ -74,7 +74,7 @@ export default function Newsletter() {
           <div>
             <h3 className="font-semibold mb-3 flex items-center">
               <Gift size={18} className="mr-2" />
-              What you'll get:
+              What you&apos;ll get:
             </h3>
             <ul className="space-y-2">
               {benefits.map((benefit, index) => (

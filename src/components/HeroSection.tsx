@@ -14,7 +14,7 @@ const AnimatedText = ({ text, delay = 0 }: { text: string; delay?: number }) => 
   </motion.span>
 );
 
-const FloatingIcon = ({ icon: Icon, className }: { icon: any; className: string }) => (
+const FloatingIcon = ({ icon: Icon, className }: { icon: React.ComponentType<any>; className: string }) => (
   <motion.div
     className={`absolute ${className}`}
     animate={{
@@ -92,9 +92,9 @@ export default function HeroSection() {
         transition={{ delay: 1, duration: 0.8 }}
         className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
       >
-        Hey, I'm Baheem! 👋 <span className="font-semibold text-purple-600 dark:text-purple-400">I am no coder, I'm a hustler.</span> It just so happens I know how to code... 
+        Hey, I&apos;m Baheem! 👋 <span className="font-semibold text-purple-600 dark:text-purple-400">I am no coder, I&apos;m a hustler.</span> It just so happens I know how to code... 
         Multi-passionate creator from Providence, RI, sharing my journey through tech, gaming, and building cool stuff. 
-        Always down to try new things and connect with awesome people. Let's build something amazing! 🚀
+        Always down to try new things and connect with awesome people. Let&apos;s build something amazing! 🚀
       </motion.p>
 
       {/* Call to Action Buttons */}
@@ -118,7 +118,7 @@ export default function HeroSection() {
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
         >
-          Let's Connect
+          Let&apos;s Connect
         </motion.a>
       </motion.div>
     </motion.div>

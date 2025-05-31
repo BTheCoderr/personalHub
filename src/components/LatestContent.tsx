@@ -5,34 +5,34 @@ import { Calendar, ExternalLink, Play, BookOpen, Code } from 'lucide-react';
 
 const contentItems = [
   {
-    type: 'youtube',
-    title: 'Building a Modern React App with Next.js 15',
-    description: 'Complete tutorial on building a full-stack application with the latest Next.js features.',
-    date: '2 days ago',
-    thumbnail: '/api/placeholder/300/200',
-    link: 'https://youtube.com/watch?v=example',
-    icon: Play,
-    platform: 'YouTube'
-  },
-  {
-    type: 'blog',
-    title: 'The Future of Web Development in 2024',
-    description: 'Exploring emerging trends and technologies that will shape the web development landscape.',
+    type: 'project',
+    title: 'JackerBox V2 - Gaming Platform Launch',
+    description: 'Enhanced multiplayer gaming experience with real-time interactions and community features that bring people together.',
     date: '1 week ago',
     thumbnail: '/api/placeholder/300/200',
-    link: 'https://blog.example.com/future-web-dev',
-    icon: BookOpen,
-    platform: 'Blog'
+    link: 'https://jackerbox.app',
+    icon: Play,
+    platform: 'Gaming'
   },
   {
     type: 'project',
-    title: 'AI-Powered Code Assistant',
-    description: 'An intelligent VS Code extension that helps developers write better code using AI.',
+    title: 'SmartProBono - Legal Tech Innovation',
+    description: 'Revolutionary platform connecting legal professionals with pro bono opportunities, making justice more accessible.',
     date: '2 weeks ago',
     thumbnail: '/api/placeholder/300/200',
-    link: 'https://github.com/your-username/ai-code-assistant',
+    link: 'https://smartprobono.org',
     icon: Code,
-    platform: 'GitHub'
+    platform: 'LegalTech'
+  },
+  {
+    type: 'project',
+    title: 'MeetopiaApp - Social Connection Hub',
+    description: 'Modern social networking platform designed to create meaningful connections through shared interests and activities.',
+    date: '3 weeks ago',
+    thumbnail: '/api/placeholder/300/200',
+    link: 'https://meetopia.vercel.app',
+    icon: BookOpen,
+    platform: 'Social'
   }
 ];
 
@@ -54,7 +54,7 @@ export default function LatestContent() {
         Latest Content
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {contentItems.map((item, index) => (
+        {contentItems.map((item) => (
           <motion.a
             key={item.title}
             href={item.link}
