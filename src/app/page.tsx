@@ -17,6 +17,7 @@ import SkillsSection from '../components/SkillsSection';
 import Newsletter from '../components/Newsletter';
 import HeroSection from '../components/HeroSection';
 import FloatingNav from '../components/FloatingNav';
+import ContactForm from '../components/ContactForm';
 
 // Custom TikTok Icon Component
 const TikTokIcon = ({ size = 24, className = "" }) => (
@@ -253,26 +254,8 @@ export default function Home() {
           <Newsletter />
 
           {/* Contact Section */}
-          <motion.div 
-            variants={itemVariants}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center"
-            id="contact"
-          >
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-              Let&apos;s Work Together
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              I&apos;m always open to discussing new opportunities, collaborations, or just having a chat about tech and creativity.
-            </p>
-            <motion.a
-              href="mailto:contact@baheemferrell.com"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Mail size={20} />
-              <span>Get In Touch</span>
-            </motion.a>
+          <motion.div variants={itemVariants} id="contact">
+            <ContactForm />
           </motion.div>
 
           {/* Footer */}

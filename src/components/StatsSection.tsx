@@ -5,26 +5,26 @@ import { Users, Eye, Heart, Star } from 'lucide-react';
 
 const stats = [
   {
-    label: 'Total Followers',
-    value: '10K+',
-    icon: Users,
+    label: 'Live Projects',
+    value: '4+',
+    icon: Star,
     color: 'text-blue-600 dark:text-blue-400'
   },
   {
-    label: 'Content Views',
-    value: '500K+',
+    label: 'Hours Coding',
+    value: '1000+',
     icon: Eye,
     color: 'text-green-600 dark:text-green-400'
   },
   {
-    label: 'Projects Built',
-    value: '25+',
-    icon: Star,
-    color: 'text-yellow-600 dark:text-yellow-400'
+    label: 'Technologies',
+    value: '15+',
+    icon: Users,
+    color: 'text-purple-600 dark:text-purple-400'
   },
   {
-    label: 'Community Love',
-    value: '50K+',
+    label: 'Problems Solved',
+    value: '∞',
     icon: Heart,
     color: 'text-red-600 dark:text-red-400'
   }
@@ -48,7 +48,7 @@ export default function StatsSection() {
       className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8"
     >
       <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-8 text-center">
-        Impact & Reach
+        The Hustle So Far
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {stats.map((stat, index) => (

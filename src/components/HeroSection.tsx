@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Globe, Code, Zap } from 'lucide-react';
+import Image from 'next/image';
 
 const AnimatedText = ({ text, delay = 0 }: { text: string; delay?: number }) => (
   <motion.span
@@ -53,8 +54,15 @@ export default function HeroSection() {
       {/* Profile Picture with Gradient Border */}
       <div className="relative w-32 h-32 mx-auto mb-6">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 rounded-full animate-pulse"></div>
-        <div className="relative w-full h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-4xl font-bold text-white m-1">
-          BF
+        <div className="relative w-full h-full rounded-full overflow-hidden m-1">
+          <Image
+            src="/profile-photo.jpg"
+            alt="Baheem Ferrell - Content Creator & Digital Hustler"
+            width={128}
+            height={128}
+            className="w-full h-full object-cover"
+            priority
+          />
         </div>
       </div>
 

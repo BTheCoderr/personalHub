@@ -6,33 +6,33 @@ import { Calendar, ExternalLink, Play, BookOpen, Code } from 'lucide-react';
 const contentItems = [
   {
     type: 'project',
-    title: 'JackerBox V2 - Gaming Platform Launch',
-    description: 'Enhanced multiplayer gaming experience with real-time interactions and community features that bring people together.',
-    date: '1 week ago',
-    thumbnail: '/api/placeholder/300/200',
-    link: 'https://jackerbox.app',
-    icon: Play,
-    platform: 'Gaming'
-  },
-  {
-    type: 'project',
-    title: 'SmartProBono - Legal Tech Innovation',
-    description: 'Revolutionary platform connecting legal professionals with pro bono opportunities, making justice more accessible.',
+    title: 'Lagos Auto PVD Launch',
+    description: 'Professional auto dealership website with inventory management, service booking system, and customer portal for Providence automotive services.',
     date: '2 weeks ago',
     thumbnail: '/api/placeholder/300/200',
-    link: 'https://smartprobono.org',
+    link: 'https://lagosauto.netlify.app/',
     icon: Code,
-    platform: 'LegalTech'
+    platform: 'Business'
   },
   {
     type: 'project',
-    title: 'MeetopiaApp - Social Connection Hub',
-    description: 'Modern social networking platform designed to create meaningful connections through shared interests and activities.',
+    title: 'APC LLC - Delivery Services Platform',
+    description: 'All Purpose Contractors cargo van delivery and moving services website with nationwide coverage and 24/7 booking system.',
     date: '3 weeks ago',
     thumbnail: '/api/placeholder/300/200',
-    link: 'https://meetopia.vercel.app',
+    link: 'https://apcllc.co/',
+    icon: Code,
+    platform: 'Logistics'
+  },
+  {
+    type: 'project',
+    title: 'Vee Visuals Creative Portfolio',
+    description: 'Creative visual design and multimedia platform showcasing professional design work and visual storytelling services.',
+    date: '1 month ago',
+    thumbnail: '/api/placeholder/300/200',
+    link: 'https://veevisuals.netlify.app/',
     icon: BookOpen,
-    platform: 'Social'
+    platform: 'Design'
   }
 ];
 
