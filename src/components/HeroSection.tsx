@@ -56,7 +56,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 rounded-full animate-pulse"></div>
         <div className="relative w-full h-full rounded-full overflow-hidden m-1">
           <Image
-            src="/profile-photo.jpg"
+            src="/profile-photo.JPG"
             alt="Baheem Ferrell - Content Creator & Digital Hustler"
             width={128}
             height={128}
@@ -68,7 +68,8 @@ export default function HeroSection() {
 
       {/* Animated Name */}
       <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-2">
-        <AnimatedText text="Baheem " delay={0.2} />
+        <AnimatedText text="Baheem" delay={0.2} />
+        <span> </span>
         <AnimatedText text="Ferrell" delay={0.4} />
       </h1>
 
