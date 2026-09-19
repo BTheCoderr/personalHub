@@ -1,285 +1,31 @@
-'use client';
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Github, 
-  Youtube, 
-  Twitter, 
-  Twitch, 
-  ExternalLink,
-  Linkedin,
-  Instagram
-} from 'lucide-react';
-import StatsSection from '../components/StatsSection';
-import LatestContent from '../components/LatestContent';
-import SkillsSection from '../components/SkillsSection';
-import Newsletter from '../components/Newsletter';
-import HeroSection from '../components/HeroSection';
-import FloatingNav from '../components/FloatingNav';
-import ContactForm from '../components/ContactForm';
-import ThemeToggle from '../components/ThemeToggle';
-
-// Custom TikTok Icon Component
-const TikTokIcon = ({ size = 24, className = "" }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className={className}
-  >
-    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-  </svg>
-);
-
-const socialLinks = [
-  {
-    name: 'GitHub',
-    url: 'https://github.com/BTheCoderr',
-    icon: Github,
-    color: 'hover:bg-gray-700 hover:text-white',
-    description: 'Open source projects & code'
-  },
-  {
-    name: 'YouTube',
-    url: 'https://www.youtube.com/channel/UCxSIx1jHikm4Z3q9aSxdyvw',
-    icon: Youtube,
-    color: 'hover:bg-red-600 hover:text-white',
-    description: 'Videos & tutorials'
-  },
-  {
-    name: 'Twitter',
-    url: 'https://x.com/bthecoderr',
-    icon: Twitter,
-    color: 'hover:bg-blue-500 hover:text-white',
-    description: 'Thoughts & quick updates'
-  },
-  {
-    name: 'Twitch',
-    url: 'https://twitch.tv/bthecoderr',
-    icon: Twitch,
-    color: 'hover:bg-purple-600 hover:text-white',
-    description: 'Live streaming & gaming'
-  },
-  {
-    name: 'TikTok',
-    url: 'https://www.tiktok.com/@bthedream_',
-    icon: TikTokIcon,
-    color: 'hover:bg-black hover:text-white',
-    description: 'Short form content & creativity'
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/baheem-ferrell-866122101/',
-    icon: Linkedin,
-    color: 'hover:bg-blue-700 hover:text-white',
-    description: 'Professional networking'
-  },
-  {
-    name: 'Instagram',
-    url: 'https://www.instagram.com/bthedream_',
-    icon: Instagram,
-    color: 'hover:bg-pink-600 hover:text-white',
-    description: 'Behind the scenes & lifestyle'
-  }
-];
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowUpRight, ArrowDown, Github, Linkedin, Mail, FileText } from 'lucide-react';
 
 const projects = [
-  {
-    title: 'Lozada Languages',
-    description: 'Professional interpreting and translation services website for Rhode Island and Massachusetts. NCSC-certified interpreters for court, medical, and community settings with comprehensive service booking.',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Professional Services'],
-    link: 'https://github.com/BTheCoderr/LozadaLanguages',
-    demo: 'https://lozadalanguages.netlify.app'
-  },
-  {
-    title: 'SmartProBono',
-    description: 'Revolutionary platform connecting legal professionals with pro bono opportunities, streamlining access to justice for underserved communities.',
-    tech: ['Next.js', 'TypeScript', 'Legal Tech', 'API Integration'],
-    link: 'https://github.com/BTheCoderr/smartprobono',
-    demo: 'https://smartprobono.org'
-  },
-  {
-    title: 'MeetopiaApp',
-    description: 'Modern social networking and meeting platform designed to bring people together through shared interests and meaningful connections.',
-    tech: ['React Native', 'Mobile', 'Social Platform', 'Real-time'],
-    link: 'https://github.com/BTheCoderr/meetopiaapp',
-    demo: 'https://meetopia.vercel.app'
-  },
-  {
-    title: 'Ownership T-Shirt Website',
-    description: 'Custom e-commerce platform for premium streetwear and branded apparel, featuring modern design and seamless shopping experience.',
-    tech: ['E-commerce', 'Web Design', 'JavaScript', 'Shopify/WooCommerce'],
-    link: 'https://github.com/BTheCoderr/ownership-tshirt-website',
-    demo: 'https://ownershiptshirt.netlify.app'
-  }
+  { name: 'SmartProBono', category: 'PRODUCT ENGINEERING · LEGAL TECH', description: 'Turning an unstructured invention idea into a clear professional handoff.', detail: 'Built guided intake, readiness profiles, document exports, and a partner dashboard around the Learn → Prepare → Connect workflow.', engineering: 'Structured forms, API routes, persistence, and a rule-based generation fallback that lets the core workflow run without an AI provider.', stack: ['Next.js', 'TypeScript', 'Supabase', 'PDF export'], url: 'https://smartprobono.org', code: 'https://github.com/BTheCoderr/smartprobonoip', color: 'mint', number: '01' },
+  { name: 'Praxis', category: 'FULL STACK · HEALTHCARE WORKFLOWS', description: 'A workspace that takes occupational therapy evaluations from assessment to action.', detail: 'Built structured intake, evidence review, report preparation, and evaluation PDF exports for school-based occupational therapists.', engineering: 'Supabase authentication, Postgres, private storage, and row-level security. A separate fictional sample workspace supports product review.', stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Supabase Auth'], url: 'https://praxis-ot.netlify.app', code: null, color: 'lavender', number: '02' },
+  { name: 'Show Your Hand', category: 'INTERACTIVE APPLICATION · GAME LOGIC', description: 'A physical card game translated into a playable browser experience.', detail: 'Built solo matches against 1–3 computer opponents, with scoring, targeted actions, defensive responses, and turn resolution.', engineering: 'Explicit gameplay rules handle counter effects, hand refills, declaration priority, and deck recycling across a 70-card deck.', stack: ['Browser application', 'Game state', 'Rule validation'], url: 'https://show-your-hand.netlify.app', code: 'https://github.com/BTheCoderr/show-your-hand', color: 'peach', number: '03' },
 ];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.1
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5
-    }
-  }
-};
-
+const skills = [
+  ['Interfaces', 'React, Next.js, TypeScript, JavaScript, Tailwind CSS, responsive layouts'],
+  ['Services & data', 'Node.js, REST APIs, Supabase, PostgreSQL, authentication'],
+  ['Delivery', 'Git, GitHub, Netlify, debugging, QA, production support'],
+];
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <a 
-        href="#main-content" 
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-        Skip to main content
-      </a>
-      <ThemeToggle />
-      <FloatingNav />
-      <main id="main-content" className="container mx-auto px-4 py-8 max-w-4xl">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="space-y-8"
-        >
-          {/* Hero Section */}
-          <HeroSection />
-
-          {/* Social Media Links */}
-          <motion.section variants={itemVariants} id="social" aria-labelledby="social-heading">
-            <h2 id="social-heading" className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">
-              Connect With Me
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {socialLinks.map((link) => (
-                <motion.a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg transition-all duration-300 transform hover:scale-105 ${link.color} group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800`}
-                  whileHover={{ y: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                  aria-label={`Visit ${link.name} - ${link.description}`}
-                >
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-gray-100 dark:bg-gray-700 rounded-lg group-hover:bg-transparent transition-colors">
-                      <link.icon size={24} className="text-gray-600 dark:text-gray-300 group-hover:text-current" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-gray-800 dark:text-white group-hover:text-current">
-                        {link.name}
-                      </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-current">
-                        {link.description}
-                      </p>
-                    </div>
-                    <ExternalLink size={20} className="text-gray-400 group-hover:text-current" />
-                  </div>
-                </motion.a>
-              ))}
-            </div>
-          </motion.section>
-
-          {/* Stats Section */}
-          <StatsSection />
-
-          {/* Latest Content */}
-          <LatestContent />
-
-          {/* Skills Section */}
-          <div id="skills">
-            <SkillsSection />
-          </div>
-
-          {/* Featured Projects */}
-          <motion.section variants={itemVariants} id="projects" aria-labelledby="projects-heading">
-            <h2 id="projects-heading" className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">
-              Featured Projects
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {projects.map((project) => (
-                <motion.div
-                  key={project.title}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg"
-                  whileHover={{ y: -5 }}
-                >
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex space-x-4">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded"
-                      aria-label={`View ${project.title} source code on GitHub`}
-                    >
-                      <Github size={18} />
-                      <span>Code</span>
-                    </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded"
-                      aria-label={`View ${project.title} live demo`}
-                    >
-                      <ExternalLink size={18} />
-                      <span>Demo</span>
-                    </a>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.section>
-
-          {/* Newsletter */}
-          <Newsletter />
-
-          {/* Contact Section */}
-          <motion.section variants={itemVariants} id="contact" aria-labelledby="contact-heading">
-            <ContactForm />
-          </motion.section>
-
-          {/* Footer */}
-          <motion.div 
-            variants={itemVariants}
-            className="text-center py-8"
-          >
-            <p className="text-gray-500 dark:text-gray-400">
-              Built with ❤️ using Next.js, Tailwind CSS, and Framer Motion
-            </p>
-          </motion.div>
-        </motion.div>
-      </main>
-    </div>
-  );
+  return <>
+    <a className="skip-link" href="#main">Skip to content</a>
+    <header className="site-header wrap"><a className="wordmark" href="#top" aria-label="Baheem Ferrell home">bf<span>.</span></a><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#experience">Experience</a><Link href="/resume">Résumé</Link><a className="nav-contact" href="#contact">Let’s talk <ArrowUpRight size={15}/></a></nav></header>
+    <main id="main">
+      <section id="top" className="hero wrap">
+        <div className="hero-copy"><p className="eyebrow"><span className="status-dot"/> OPEN TO SOFTWARE ENGINEERING ROLES</p><p className="intro">Hi, I’m Baheem Ferrell.</p><h1>I build software<br/>that people<br/><span>can put to work.</span></h1><p className="hero-description">Full-stack software engineer building web applications with React, Next.js, TypeScript, and PostgreSQL. From the first workflow to the production release.</p><div className="actions"><a className="button primary" href="#work">Explore my work <ArrowDown size={17}/></a><Link className="button secondary" href="/resume"><FileText size={17}/> View résumé</Link></div><p className="location">Based in Providence, Rhode Island</p></div>
+        <aside className="profile-panel"><div className="portrait"><Image src="/profile-photo.JPG" alt="Baheem Ferrell" fill sizes="(max-width: 760px) 85vw, 380px" priority/></div><div className="profile-caption"><span>ENGINEER. BUILDER. PROBLEM SOLVER.</span><div className="profile-links"><a href="https://github.com/BTheCoderr" aria-label="Baheem on GitHub"><Github size={20}/></a><a href="https://www.linkedin.com/in/baheem-ferrell-866122101/" aria-label="Baheem on LinkedIn"><Linkedin size={20}/></a><a href="mailto:bferrell514@gmail.com" aria-label="Email Baheem"><Mail size={20}/></a></div></div><p className="panel-note">Thoughtful interfaces.<br/>Reliable workflows.<br/>Ownership from end to end.</p></aside>
+      </section>
+      <div className="stack-strip"><div className="wrap"><span>MY CORE TOOLKIT</span><p>React <i>/</i> Next.js <i>/</i> TypeScript <i>/</i> PostgreSQL <i>/</i> Supabase</p></div></div>
+      <section id="work" className="section wrap"><div className="section-heading"><div><p className="eyebrow">01 / SELECTED WORK</p><h2>Real problems.<br/>Working software.</h2></div><p>A closer look at the applications I build and the engineering behind them.</p></div><div className="projects">{projects.map(p=><article className="project" key={p.name}><div className={`project-title ${p.color}`}><span className="project-number">{p.number}</span><div><p className="eyebrow">{p.category}</p><h3>{p.name}</h3><p>{p.description}</p></div><ArrowUpRight size={32} aria-hidden="true"/></div><div className="project-body"><p>{p.detail}</p><h4>Engineering focus</h4><p>{p.engineering}</p><ul className="tags" aria-label="Technologies and capabilities">{p.stack.map(s=><li key={s}>{s}</li>)}</ul><div className="project-links"><a href={p.url}>View application <ArrowUpRight size={16}/></a>{p.code ? <a href={p.code}><Github size={16}/> Source code</a> : <span>Private repository</span>}</div></div></article>)}</div></section>
+      <section id="experience" className="experience section"><div className="wrap experience-grid"><div><p className="eyebrow">02 / EXPERIENCE</p><h2>Building products.<br/>Solving production<br/>problems.</h2><p className="section-description">My background combines independent product development with enterprise software support and team-based development.</p><Link className="text-link" href="/resume">Read my résumé <ArrowUpRight size={18}/></Link></div><div className="timeline"><article><p className="date">2025 — PRESENT</p><h3>SmartProBono</h3><p className="role">Founder · Product engineering</p><p>Own application workflows, interface development, integrations, and releases for an IP readiness platform.</p></article><article><p className="date">2021 — PRESENT</p><h3>Independent development</h3><p className="role">Full-stack web applications & client projects</p><p>Translate requirements into responsive applications and websites, then handle deployment, debugging, and iteration.</p></article><article><p className="date">2022 — 2025</p><h3>MEDITECH</h3><p className="role">Software Support Specialist</p><p>Investigated enterprise healthcare software issues, reproduced failures, and coordinated resolutions with customers and engineering teams.</p></article><article><p className="date">2019 — 2021</p><h3>MojoTech</h3><p className="role">Software development internship</p><p>Contributed to web application features, debugging, testing, and team development workflows.</p></article></div></div></section>
+      <section id="skills" className="section wrap"><p className="eyebrow">03 / HOW I BUILD</p><h2>Practical tools.<br/>End-to-end ownership.</h2><div className="skills-grid">{skills.map(([title,body],i)=><article key={title}><span className="skill-number">0{i+1}</span><h3>{title}</h3><p>{body}</p></article>)}</div><div className="education"><span>EDUCATION</span><p>University of Rhode Island<br/><strong>B.A., Computer & Data Science</strong></p></div></section>
+      <section id="contact" className="contact wrap"><p className="eyebrow">LET’S BUILD SOMETHING USEFUL</p><h2>Looking for an engineer<br/>who owns the work?</h2><p>I’m interested in software engineering roles focused on useful products, thoughtful interfaces, and reliable systems.</p><a className="button primary" href="mailto:bferrell514@gmail.com">Email me <ArrowUpRight size={18}/></a><a className="email" href="mailto:bferrell514@gmail.com">bferrell514@gmail.com</a></section>
+    </main><footer className="wrap footer"><span>© {new Date().getFullYear()} Baheem Ferrell</span><div><a href="https://github.com/BTheCoderr">GitHub</a><a href="https://www.linkedin.com/in/baheem-ferrell-866122101/">LinkedIn</a><Link href="/resume">Résumé</Link></div></footer>
+  </>;
 }
