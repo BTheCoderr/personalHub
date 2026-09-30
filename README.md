@@ -1,5 +1,11 @@
 # Personal Hub - Digital Portfolio & Social Media Hub
 
+<!-- repo-intro:start -->
+**Project snapshot:** Personal Hub is a modern portfolio and social-presence dashboard designed to bring projects, skills, platforms, recent content, and personal brand touchpoints into one responsive site.
+
+**What it demonstrates:** Next.js · Tailwind CSS · Framer Motion · portfolio UX · multi-platform presentation.
+<!-- repo-intro:end -->
+
 A modern, responsive personal hub built with Next.js 15, featuring a beautiful interface to showcase your social media presence, projects, skills, and content across all platforms.
 
 ## ✨ Features
