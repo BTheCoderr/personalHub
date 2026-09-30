@@ -8,6 +8,8 @@
 
 **Live portfolio:** https://bthedream.netlify.app/
 
+> **I am no coder, I'm a hustler. It just so happens I know how to code.**
+
 Personal Hub is the presentation layer around a larger body of product work: web apps, React Native builds, AI workflows, realtime systems, business sites, and original game products.
 
 ## Portfolio direction
