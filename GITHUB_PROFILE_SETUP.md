@@ -14,9 +14,9 @@ GitHub profile READMEs require a **public repository named exactly `BTheCoderr`*
 
 Use:
 
-> React / React Native developer building production web + mobile products. Next.js · Expo · TypeScript · Supabase · AI · realtime.
+> I am no coder, I'm a hustler. It just so happens I know how to code. Building web + mobile products with React, React Native, Next.js, Expo, Supabase & AI.
 
-This replaces older language such as “I am no coder,” which undersells the current body of work.
+That line is part of the brand voice. Keep it. The project READMEs and pinned work provide the technical proof behind it.
 
 ## Recommended pinned repositories
 
