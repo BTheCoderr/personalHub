@@ -1,6 +1,8 @@
 # Baheem Ferrell
 
-**React / React Native Developer · Product Builder · AI + Supabase · Providence, RI**
+**I am no coder, I'm a hustler. It just so happens I know how to code.**
+
+React / React Native Developer · Product Builder · AI + Supabase · Providence, RI
 
 I build and ship web and mobile products — especially the messy middle between **“the prototype works”** and **“people can actually use this.”**
 
