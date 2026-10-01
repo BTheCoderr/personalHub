@@ -1,13 +1,13 @@
 # Baheem Ferrell
 
-**Front-End / Full-Stack Developer**  
+**Full-Stack Software Engineer**  
 Providence, RI  
-401-316-1280 | bferrell514@gmail.com  
+bferrell514@gmail.com  
 [LinkedIn](https://www.linkedin.com/in/baheem-ferrell-866122101/) | [GitHub](https://github.com/BTheCoderr) | [Portfolio](https://bthedream.netlify.app/)
 
 ## Professional Summary
 
-Front-end and full-stack developer with 5+ years of experience building responsive, production-ready web applications and client websites. Strong in React, Next.js, TypeScript, JavaScript, HTML/CSS, API integrations, Git-based delivery, and translating product and design requirements into polished user experiences. Experienced shipping projects from architecture and implementation through QA, deployment, and ongoing production support.
+Software engineer building responsive, production-ready web applications and product workflows with React, Next.js, TypeScript, JavaScript, PostgreSQL, Supabase, and Git-based delivery. Experience spans product engineering, API integrations, authentication, deployment, debugging, QA, and enterprise software support.
 
 ## Technical Skills
 
@@ -18,18 +18,18 @@ Front-end and full-stack developer with 5+ years of experience building responsi
 
 ## Professional Experience
 
-### Founder & Chief Technology Officer | SmartProBono
+### Founder / Product Engineering | SmartProBono
 **Providence, RI / Remote | Jan 2025 - Present**
 
-- Lead front-end and product engineering for AI-assisted legal technology, building responsive Next.js and TypeScript workflows for intake, dashboards, document preparation, and professional handoff.
-- Build reusable UI components, forms, authenticated experiences, API integrations, and production deployments with Supabase/PostgreSQL, GitHub, and Netlify.
-- Own debugging, QA, performance improvements, release priorities, and stakeholder-driven iteration across web products.
+- Build Legal + IP preparation workflows for guided intake, readiness profiles, document preparation, account workspaces, and professional handoff.
+- Build reusable interfaces, forms, authenticated experiences, API integrations, and production releases with Next.js, TypeScript, Supabase, and PostgreSQL.
+- Own debugging, QA, performance improvements, release priorities, and stakeholder-driven iteration.
 
 ### Independent Full-Stack Developer | Freelance / Client Projects
 **Remote | 2021 - Present**
 
 - Design, build, and deploy responsive business websites and web applications using React, Next.js, TypeScript, JavaScript, modern CSS, APIs, and third-party integrations.
-- Translate business requirements and visual direction into production-ready interfaces, including lead forms, booking flows, service pages, galleries, and conversion-focused mobile experiences.
+- Translate business requirements and visual direction into production-ready interfaces, including lead forms, service pages, application workflows, and conversion-focused mobile experiences.
 - Maintain GitHub-based development workflows and deploy client projects through Netlify and Vercel.
 
 ### Software Support Specialist | MEDITECH
@@ -38,16 +38,16 @@ Front-end and full-stack developer with 5+ years of experience building responsi
 - Diagnosed complex production issues in enterprise healthcare software, reproduced failures, documented findings, and coordinated resolutions with customers and engineering teams.
 - Managed concurrent high-priority cases in a reliability- and data-sensitive environment.
 
-### Junior Software Developer | MojoTech
+### Software Development Intern | MojoTech
 **Providence, RI | May 2019 - Dec 2021**
 
-- Built and tested customer-facing web application features with JavaScript/TypeScript in Agile teams.
-- Contributed to requirements clarification, debugging, source control, QA, and release delivery.
+- Contributed to customer-facing web application features, debugging, testing, source control, QA, and team development workflows.
 
 ## Selected Work
 
-- **APC Logistics:** https://apcllc.co/
-- **All Goode Property Services:** https://all-goode-property-services.netlify.app/
+- **SmartProBono:** https://smartprobono.org/
+- **Praxis OT:** https://usepraxisot.com/
+- **Show Your Hand:** https://show-your-hand.netlify.app/
 - **Portfolio:** https://bthedream.netlify.app/
 - **GitHub:** https://github.com/BTheCoderr
 
