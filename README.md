@@ -1,34 +1,26 @@
 # Personal Hub — BTheDream
 
 <!-- repo-intro:start -->
-**Project snapshot:** Personal Hub is Baheem Ferrell's portfolio and digital home for presenting shipped products, engineering work, creative projects, and professional contact points in one responsive experience.
+**Project snapshot:** Personal Hub is Baheem Ferrell's portfolio and digital home for presenting shipped products, engineering work, and professional contact points in one responsive experience.
 
-**What it demonstrates:** Next.js · TypeScript · Tailwind CSS · Framer Motion · responsive portfolio UX · multi-project presentation.
+**What it demonstrates:** Next.js · TypeScript · Tailwind CSS · accessible responsive UI · production-focused project presentation.
 <!-- repo-intro:end -->
 
 **Live portfolio:** https://bthedream.netlify.app/
 
+This repository powers the public portfolio for a full-stack software engineer building useful production software across legal tech, education workflows, and interactive products.
+
 > **I am no coder, I'm a hustler. It just so happens I know how to code.**
 
-Personal Hub is the presentation layer around a larger body of product work: web apps, React Native builds, AI workflows, realtime systems, business sites, and original game products.
+## Featured work
 
-## Portfolio direction
+The public site intentionally keeps the featured set to three audited products:
 
-The portfolio is built to answer four questions quickly:
-
-1. What does Baheem build?
-2. Which projects are strongest?
-3. What technical problems has he solved?
-4. Where can someone try the work or inspect the code?
-
-The current flagship set is:
-
-- **Praxis OT** — structured OT evaluation workflow + clinician-reviewed AI
 - **SmartProBono** — Legal + IP preparation platform
-- **Chess Universe** — offline-first chess + trusted realtime multiplayer
-- **Meetopia** — WebRTC social product with web/mobile clients
-- **Voxa** — React Native AI speaking-practice app
-- **SHOW YOUR HAND** — original physical/browser card game
+- **Praxis OT** — school-based occupational therapy evaluation workflow
+- **SHOW YOUR HAND** — original card game with solo play and online 1v1 multiplayer
+
+Other shipped work remains available through the GitHub profile and individual repositories, but this portfolio stays deliberately focused.
 
 ## Tech stack
 
@@ -37,6 +29,10 @@ The current flagship set is:
 - TypeScript
 - Tailwind CSS
 - Framer Motion
+
+## Quality
+
+GitHub Actions runs lint and production-build checks on pull requests and on updates to `main`.
 
 ## Related profile files
 
@@ -57,7 +53,5 @@ Open the local Next.js development URL shown in the terminal.
 The public portfolio is hosted at:
 
 **https://bthedream.netlify.app/**
-
----
 
 The goal of this repo is presentation, not to duplicate every project README. Individual repositories remain the source of truth for architecture, setup, security, and release status.
