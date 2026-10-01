@@ -1,0 +1,37 @@
+name: Validate portfolio audit
+
+on:
+  push:
+    branches:
+      - audit/bthedream-readiness-2026-09-30
+    paths:
+      - .github/workflows/validate-audit.yml
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out audit branch
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Production build
+        run: npm run build
+      - name: Record successful validation
+        run: |
+          printf "# Audit validation\n\nValidated commit: %s\n\n- npm ci: passed\n- npm run lint: passed\n- npm run build: passed\n" "$GITHUB_SHA" > AUDIT_VALIDATION.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add AUDIT_VALIDATION.md
+          git commit -m "test: record audit validation"
+          git push
