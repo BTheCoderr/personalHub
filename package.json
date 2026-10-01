@@ -6,13 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "framer-motion": "^12.15.0",
     "lucide-react": "^0.511.0",
-    "next": "15.3.9",
+    "next": "15.5.24",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -23,7 +22,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.3.9",
+    "eslint-config-next": "15.5.24",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
